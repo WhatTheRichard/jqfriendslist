@@ -16,7 +16,7 @@ function addFriend(friend){
 $(document).ready(function(){
 	$.ajax({
 		type: 'GET',
-		url: 'http://rest.learncode.academy/api/learncode/friends',
+		url: 'https://rest.learncode.academy/api/learncode/friends',
 		success: function(friends) {
 			$.each(friends, function(i, friend){
 				addFriend(friend);
@@ -35,7 +35,7 @@ $(document).ready(function(){
 		};
 		$.ajax({
 			type: 'POST',
-			url: 'http://rest.learncode.academy/api/learncode/friends',
+			url: 'https://rest.learncode.academy/api/learncode/friends',
 			data: friend,
 			success: function(newFriend){
 				addFriend(newFriend);
@@ -50,7 +50,7 @@ $(document).ready(function(){
 		var $li = $(this).closest('li');
 		$.ajax({
 			type: 'DELETE',
-			url: 'http://rest.learncode.academy/api/learncode/friends/' + $(this).attr('id'),
+			url: 'https://rest.learncode.academy/api/learncode/friends/' + $(this).attr('id'),
 			success: function(){
 				$li.fadeOut(300, function(){
 					$(this).remove();
